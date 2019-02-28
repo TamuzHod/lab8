@@ -10,4 +10,12 @@ function initMap() {
 	});
 
 	L.marker([32.8784341,-117.2358094]).addTo(map);
+    var popup = L.popup();
+
+	map.on('click', function(e) {
+		L.marker([e.latlng.lat,e.latlng.lng]).addTo(map);
+	});
+
+
 }
+ 
